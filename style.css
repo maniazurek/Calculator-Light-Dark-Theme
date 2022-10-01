@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #DAF0FF;
+}
+
+.container {
+    margin: 0 auto;
+    width: 375px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: #F7F8FB;
+    border-radius: 39px;
+}
+
+.controls__container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.button {
+    cursor: pointer;
+    border-radius: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    width: 62px;
+    height: 60px;
+}
+
+.controls__button-operation {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #858585;
+    background-color: #fff;
+    border: 1px solid #fff;
+    
+}
+
+.controls__button-action {
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 26.13px;
+    color: #109DFF;
+    background-color: #ADE2FF;
+    border: 1px solid #ADE2FF;
+}
+
+.controls__button-number {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    color: #38B9FF;
+    background-color: #f9f9fb;
+    border: 1px solid #fff;
+}
+
+.controls__button-zero {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    color: #38B9FF;
+    background-color: #f9f9fb;
+    border: 1px solid #fff;
+    grid-column: 1 / 3;
+    width: 144px;
+}
+
+.controls__button-result {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 26.13px;
+    color: #B2DAFF;
+    background-color: #19ACFF;
+    border: 1px solid #19ACFF;
+}
