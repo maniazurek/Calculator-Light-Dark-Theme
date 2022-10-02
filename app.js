@@ -66,7 +66,7 @@ numberButtons.forEach(function (element) {
         calculationActionWindow.innerText = "";
         resultValueWindow.innerText = "";
 
-        resultOperatorWindow.classList.remove(".window__result-operator_visible");
+        resultOperatorWindow.classList.add(".window__result-operator_visible");
 
     });
 
@@ -92,6 +92,7 @@ numberButtons.forEach(function (element) {
             calculationActionWindow.innerText = "";
             result = null;
             resultOperatorWindow.innerText = "";
+            resultValueWindow.innerText = "";
         }});
 
 

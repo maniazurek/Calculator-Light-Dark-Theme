@@ -68,9 +68,9 @@ main.darktheme {
 
 .window__calculation {
     margin-top: 147px;
+    width: 300px;
     display: flex;
     justify-content: flex-end;
-    padding: 0 33px;
 }
 
 .window__calculation-firstNumber {
