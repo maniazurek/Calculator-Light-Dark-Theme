@@ -12,6 +12,7 @@ const historyButton = document.querySelector(".controls__button-history");
 const body = document.querySelector("body");
 const firstNumberWindow = document.querySelector(".window__calculation-firstNumber");
 const secondNumberWindow = document.querySelector(".window__calculation-secondNumber");
+const calculationActionWindow = document.querySelector(".window__calculation-action");
 const resultOperatorWindow = document.querySelector(".window__result-operator");
 const resultValueWindow = document.querySelector(".window__result-value");
 
@@ -29,10 +30,10 @@ numberButtons.forEach(function (element) {
         
             if (!action && !result) {
                 firstNumber = event.target.dataset.number;
-                fisrNumberWindow.innerText += firstNumber;
-        } else if (numberA) {
-            numberB = event.target.dataset.number;
-            calculationWindow.innerText += numberB;
+                firstNumberWindow.innerText += firstNumber;
+        } else if (firstNumber) {
+            secondNumber = event.target.dataset.number;
+            secondNumberWindow.innerText += secondNumber;
             }
         })
     });
@@ -40,22 +41,74 @@ numberButtons.forEach(function (element) {
     actionButtons.forEach(function (element) {
         element.addEventListener("click", function (event) {
 
-            if (numberA) {
+            if (firstNumber && !secondNumber) {
                 action = event.target.dataset.action;
-                calculationWindow.innerText += action;
+                calculationActionWindow.innerText = action;
             }
         })
     });
 
-    resultButton.addEventListener("click", function (element) {
+    resetButton.addEventListener("click", function() {
 
-        if (numberA && action && numberB) {
-            if (action === "+") {
-                result = numberA + NumberB;
+        firstNumber = null;
+        secondNumber = null;
+        action = null;
+        result = null;
+
+        firstNumberWindow.innerText = "";
+        secondNumberWindow.innerText = ""; 
+        calculationActionWindow.innerText = "";
+        resultValueWindow.innerText = "";
+
+        resultOperatorWindow.classList.remove(".window__result-operator_visible");
+
+    });
+
+    removeButton.addEventListener("click", function() {
+
+        if (!result) {
+            if (secondNumber) {
+                secondNumber = null;
+                secondNumberWindow.innerText = "";
+            } else if (action) {
+                action = null;
+                calculationActionWindow.innerText = "";
+            } else if (firstNumber) {
+                firstNumber = null;
+                firstNumberWindow.innerText = "";
             }
+        } else if (result) {
+            firstNumber = null;
+            firstNumberWindow.innerText = "";
+            secondNumber = null;
+            secondNumberWindow.innerText = "";
+            action = null;
+            calculationActionWindow.innerText = "";
+            result = null;
+            resultOperatorWindow.innerText = "";
+        }});
+
+
+    resultButton.addEventListener("click", function() {
+        if (firstNumber && action && secondNumber) {
+            if (action === "+") {
+                result = Number(firstNumber) + Number(secondNumber);
+            } else if (action === "-") {
+                result = Number(firstNumber) - Number(secondNumber);
+            } else if (action === "*") {
+                result = Number(firstNumber) * Number(secondNumber);
+            } else if (action === "/") {
+                result = Number(firstNumber) / Number(secondNumber);
+            }
+
         }
+        resultOperatorWindow.classList.remove(".window__result-operator");
+        resultOperatorWindow.classList.add(".window__result-operator_visible");
+        resultValueWindow.innerText = result;
     }
     )
+
+
 
 
 
