@@ -15,11 +15,27 @@ body {
     border-radius: 39px;
 }
 
+.window__calculation {
+    margin-top: 147px;
+    margin-left: auto;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #818181;
+}
+
+main.darktheme {
+    background-color: #17181A;
+}
+
 .controls__container {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    padding-bottom: 40px;
 }
 
 .button {
@@ -31,14 +47,19 @@ body {
     height: 60px;
 }
 
-.controls__button-operation {
+.controls__button-reset, .controls__button-remove, .controls__button-history {
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
     color: #858585;
     background-color: #fff;
     border: 1px solid #fff;
-    
+}
+
+main.darktheme .controls__button-reset, .controls__button-remove, .controls__button-history {
+    background-color: #616161;
+    color: #A5A5A5;
+    border-color: #616161;
 }
 
 .controls__button-action {
@@ -50,6 +71,12 @@ body {
     border: 1px solid #ADE2FF;
 }
 
+main.darktheme .controls__button-action {
+    background-color: #005DB2;
+    border-color: #005DB2;
+    color: #24A5FF;
+}
+
 .controls__button-number {
     font-weight: 500;
     font-size: 32px;
@@ -57,6 +84,12 @@ body {
     color: #38B9FF;
     background-color: #f9f9fb;
     border: 1px solid #fff;
+}
+
+main.darktheme .controls__button-number {
+    background-color: #303136;
+    border-color: #303136;
+    color: #29A8FF;
 }
 
 .controls__button-zero {
@@ -70,6 +103,12 @@ body {
     width: 144px;
 }
 
+main.darktheme .controls__button-zero {
+    background-color: #303136;
+    border-color: #303136;
+    color: #29A8FF;
+}
+
 .controls__button-result {
     font-weight: 500;
     font-size: 32px;
@@ -77,4 +116,10 @@ body {
     color: #B2DAFF;
     background-color: #19ACFF;
     border: 1px solid #19ACFF;
+}
+
+main.darktheme .controls__button-result {
+    background-color: #1991FF;
+    border-color: #1991FF;
+    color: #B2DAFF;
 }

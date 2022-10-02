@@ -11,29 +11,36 @@
     <title>Calculator</title>
 </head>
 <body>
-    <main class="container">
+    <main class="container darktheme">
         <section class="windows__container">
-
+            <div class="window__calculation">
+                <span class="window__calculation-firstNumber"></span>
+                <span class="window__calculation-secondNumber"></span>
+            </div>
+            <div class="window__result">
+                <span class="window__result-operator">=</span>
+                <span class="window__result-value"></span>
+              </div>
         </section>
         <section class="controls__container">
-            <button class="button controls__button-operation">Ac</button>
-            <button class="button controls__button-operation">⌫</button>
-            <button class="button controls__button-operation">H</button>
-            <button class="button controls__button-action">/</button>
-            <button class="button controls__button-number">7</button>
-            <button class="button controls__button-number">8</button>
-            <button class="button controls__button-number">9</button>
-            <button class="button controls__button-action">*</button>
-            <button class="button controls__button-number">4</button>
-            <button class="button controls__button-number">5</button>
-            <button class="button controls__button-number">6</button>
-            <button class="button controls__button-action">-</button>
-            <button class="button controls__button-number">1</button>
-            <button class="button controls__button-number">2</button>
-            <button class="button controls__button-number">3</button>
-            <button class="button controls__button-action">+</button>
-            <button class="button controls__button-zero">0</button>
-            <button class="button controls__button-number">.</button>
+            <button class="button controls__button-reset">Ac</button>
+            <button class="button controls__button-remove">⌫</button>
+            <button class="button controls__button-history">H</button>
+            <button class="button controls__button-action" data-action="/">/</button>
+            <button class="button controls__button-number" data-number="7">7</button>
+            <button class="button controls__button-number" data-number="8">8</button>
+            <button class="button controls__button-number" data-number="9">9</button>
+            <button class="button controls__button-action" data-action="*">*</button>
+            <button class="button controls__button-number" data-number="4">4</button>
+            <button class="button controls__button-number" data-number="5">5</button>
+            <button class="button controls__button-number" data-number="6">6</button>
+            <button class="button controls__button-action" data-action="-">-</button>
+            <button class="button controls__button-number" data-number="1">1</button>
+            <button class="button controls__button-number" data-number="2">2</button>
+            <button class="button controls__button-number" data-number="3">3</button>
+            <button class="button controls__button-action" data-action="+">+</button>
+            <button class="button controls__button-number controls__button-zero" data-number="0">0</button>
+            <button class="button controls__button-number" data-number=".">.</button>
             <button class="button controls__button-result">=</button>
         </section>
         
