@@ -11,11 +11,16 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div>
-        <input class="theme_change" type="checkbox"/>
-    </div>
-    <main class="container darktheme">
-        <section class="windows__container">
+    <main class="calculator">
+        <div>
+            <input class="checkbox" type="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+                <i class="dark"></i>
+                <i class="light"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+        <section class="windows__calculator">
             <div class="window__calculation">
                 <span class="window__calculation-firstNumber"></span>
                 <span class="window__calculation-action"></span>
@@ -26,7 +31,7 @@
                 <span class="window__result-value"></span>
               </div>
         </section>
-        <section class="controls__container">
+        <section class="controls__calculator">
             <button class="button controls__button-reset">Ac</button>
             <button class="button controls__button-remove">⌫</button>
             <button class="button controls__button-history">H</button>

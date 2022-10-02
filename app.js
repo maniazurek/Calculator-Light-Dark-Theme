@@ -1,11 +1,13 @@
 // Buttons 
 
+const main = document.querySelector(".calculator");
 const numberButtons = document.querySelectorAll(".controls__button-number");
 const actionButtons = document.querySelectorAll(".controls__button-action");
 const resultButton = document.querySelector(".controls__button-result");
 const resetButton = document.querySelector(".controls__button-reset");
 const removeButton = document.querySelector(".controls__button-remove");
 const historyButton = document.querySelector(".controls__button-history");
+const checkbox = document.getElementById("checkbox");
 
 // Containers
 
@@ -24,6 +26,10 @@ let action;
 let result;
 
 // Event listners
+
+checkbox.addEventListener("click", function() {
+    main.classList.toggle("darktheme");
+});
 
 numberButtons.forEach(function (element) {
     element.addEventListener("click", function (event) {

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -6,7 +10,54 @@ body {
     background-color: #DAF0FF;
 }
 
-.container {
+.label {
+    color: #109DFF;
+    background-color: #ADE2FF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    border-radius: 50px;
+    height: 35px;
+    width: 70px;
+    position: relative;
+}
+
+main.darktheme .label {
+    background-color: #005DB2;
+    color: #24A5FF;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.dark, .light {
+    font-size: 25px;
+    padding-right: 5px;
+}
+
+.ball {
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(34px);
+}
+
+main.darktheme {
+    background-color: #17181A;
+}
+
+.calculator {
     margin: 0 auto;
     width: 375px;
     display: grid;
@@ -61,7 +112,11 @@ body {
     font-weight: 500;
     font-size: 50px;
     line-height: 72px;
-    color: #FFFFFF;
+    color: #424242;
+}
+
+main.darktheme .window__result-value {
+    color: #fff;
 }
 
 .window__result-operator {
@@ -72,11 +127,7 @@ body {
     display: inline;
 }
 
-main.darktheme {
-    background-color: #17181A;
-}
-
-.controls__container {
+.controls__calculator {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -93,7 +144,7 @@ main.darktheme {
     height: 60px;
 }
 
-.controls__button-reset, .controls__button-remove, .controls__button-history {
+.controls__button-reset {
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
@@ -102,7 +153,37 @@ main.darktheme {
     border: 1px solid #fff;
 }
 
-main.darktheme .controls__button-reset, .controls__button-remove, .controls__button-history {
+.controls__button-remove {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #858585;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.controls__button-history {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #858585;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+main.darktheme .controls__button-reset {
+    background-color: #616161;
+    color: #A5A5A5;
+    border-color: #616161;
+}
+
+main.darktheme .controls__button-remove {
+    background-color: #616161;
+    color: #A5A5A5;
+    border-color: #616161;
+}
+
+main.darktheme .controls__button-history {
     background-color: #616161;
     color: #A5A5A5;
     border-color: #616161;
