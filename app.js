@@ -37,7 +37,7 @@ numberButtons.forEach(function (element) {
             if (!action && !result) {
                 firstNumber = event.target.dataset.number;
                 firstNumberWindow.innerText += firstNumber;
-        } else if (firstNumber) {
+        } else if (firstNumber && !result) {
             secondNumber = event.target.dataset.number;
             secondNumberWindow.innerText += secondNumber;
             }
@@ -83,17 +83,8 @@ numberButtons.forEach(function (element) {
                 firstNumber = null;
                 firstNumberWindow.innerText = "";
             }
-        } else if (result) {
-            firstNumber = null;
-            firstNumberWindow.innerText = "";
-            secondNumber = null;
-            secondNumberWindow.innerText = "";
-            action = null;
-            calculationActionWindow.innerText = "";
-            result = null;
-            resultOperatorWindow.innerText = "";
-            resultValueWindow.innerText = "";
-        }});
+        }
+    });
 
 
     resultButton.addEventListener("click", function() {
@@ -109,7 +100,6 @@ numberButtons.forEach(function (element) {
             }
 
         }
-        resultOperatorWindow.classList.remove(".window__result-operator");
         resultOperatorWindow.classList.add(".window__result-operator_visible");
         resultValueWindow.innerText = result;
     }
