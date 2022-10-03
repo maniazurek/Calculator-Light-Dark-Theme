@@ -10,6 +10,12 @@ body {
     background-color: #DAF0FF;
 }
 
+.theme {
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
 .label {
     color: #109DFF;
     background-color: #ADE2FF;
@@ -68,11 +74,9 @@ main.darktheme {
 }
 
 .window__calculation {
-    margin-top: 147px;
-    width: 300px;
-    height: 150px;
     display: flex;
     justify-content: flex-end;
+    padding: 0 33px;
 }
 
 .window__calculation-firstNumber {
@@ -106,7 +110,6 @@ main.darktheme {
     display: flex;
     justify-content: flex-end;
     padding: 0 33px;
-    height: 72px;
 }
 
 .window__result-value {
