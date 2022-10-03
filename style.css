@@ -60,6 +60,7 @@ main.darktheme {
 .calculator {
     margin: 0 auto;
     width: 375px;
+    height: 812px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     background-color: #F7F8FB;
@@ -69,6 +70,7 @@ main.darktheme {
 .window__calculation {
     margin-top: 147px;
     width: 300px;
+    height: 150px;
     display: flex;
     justify-content: flex-end;
 }
@@ -104,6 +106,7 @@ main.darktheme {
     display: flex;
     justify-content: flex-end;
     padding: 0 33px;
+    height: 72px;
 }
 
 .window__result-value {
@@ -126,6 +129,8 @@ main.darktheme .window__result-value {
 .window__result-operator_visible {
     display: inline;
 }
+
+
 
 .controls__calculator {
     margin: 0 auto;
