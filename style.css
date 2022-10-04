@@ -121,6 +121,10 @@ main.darktheme {
     color: #424242;
 }
 
+main.darktheme .window__result-operator_visible {
+    color: #fff;
+}
+
 main.darktheme .window__result-value {
     color: #fff;
 }
@@ -131,6 +135,16 @@ main.darktheme .window__result-value {
 
 .window__result-operator_visible {
     display: inline;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 72px;
+    color: #424242;
+}
+
+main.darktheme .window__result-value {
+    color: #fff;
 }
 
 .controls__calculator {
@@ -219,7 +233,22 @@ main.darktheme .controls__button-action {
     border: 1px solid #fff;
 }
 
+.controls__button-point {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    color: #38B9FF;
+    background-color: #f9f9fb;
+    border: 1px solid #fff;
+}
+
 main.darktheme .controls__button-number {
+    background-color: #303136;
+    border-color: #303136;
+    color: #29A8FF;
+}
+
+main.darktheme .controls__button-point {
     background-color: #303136;
     border-color: #303136;
     color: #29A8FF;
