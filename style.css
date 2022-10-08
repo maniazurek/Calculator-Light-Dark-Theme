@@ -71,6 +71,7 @@ main.darktheme {
     grid-template-rows: 1fr 1fr;
     background-color: #F7F8FB;
     border-radius: 39px;
+    box-shadow: 35px 35px 84px 1px rgba(96, 190, 255, 1);
 }
 
 .window__calculation {

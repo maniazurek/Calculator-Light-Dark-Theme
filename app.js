@@ -40,13 +40,22 @@ checkbox.addEventListener("click", function () {
 
 numberButtons.forEach(function (element) {
   element.addEventListener("click", function (event) {
-    if (!action && !result) {
+    if (!action) {
       firstNumber += event.target.dataset.number;
       firstNumberWindow.innerText = firstNumber;
-      console.log(firstNumber);
     } else if (firstNumber && !result) {
       secondNumber += event.target.dataset.number;
       secondNumberWindow.innerText = secondNumber;
+    } else if (result) {
+      firstNumber = event.target.dataset.number;
+      firstNumberWindow.innerText = firstNumber;
+      secondNumber = "";
+      action = null;
+      result = null;
+      secondNumberWindow.innerText = "";
+      calculationActionWindow.innerText = "";
+      resultValueWindow.innerText = "";
+      resultOperatorWindow.classList.remove("window__result-operator_visible");
     }
   });
 });
