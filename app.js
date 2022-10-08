@@ -69,7 +69,7 @@ pointButton.addEventListener("click", function (event) {
       firstNumber += event.target.dataset.number;
       firstNumberWindow.innerText = firstNumber;
     }
-  } else {
+  } else if (action && !result) {
     if (secondNumber.length === 0) {
       secondNumber = "0.";
       secondNumberWindow.innerText = secondNumber;
@@ -77,6 +77,16 @@ pointButton.addEventListener("click", function (event) {
       secondNumber += event.target.dataset.number;
       secondNumberWindow.innerText = secondNumber;
     }
+  } else if (result) {
+    firstNumber = "0.";
+    firstNumberWindow.innerText = firstNumber;
+    secondNumber = "";
+    action = null;
+    result = null;
+    secondNumberWindow.innerText = "";
+    calculationActionWindow.innerText = "";
+    resultValueWindow.innerText = "";
+    resultOperatorWindow.classList.remove("window__result-operator_visible");
   }
 });
 
