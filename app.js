@@ -132,14 +132,20 @@ resultButton.addEventListener("click", function () {
   if (firstNumber && action && secondNumber) {
     if (action === "+") {
       result = Number(firstNumber) + Number(secondNumber);
+      resultValueWindow.innerText = result;
+      resultOperatorWindow.classList.add("window__result-operator_visible");
     } else if (action === "-") {
       result = Number(firstNumber) - Number(secondNumber);
+      resultValueWindow.innerText = result;
+      resultOperatorWindow.classList.add("window__result-operator_visible");
     } else if (action === "*") {
       result = Number(firstNumber) * Number(secondNumber);
+      resultValueWindow.innerText = result;
+      resultOperatorWindow.classList.add("window__result-operator_visible");
     } else if (action === "/") {
       result = Number(firstNumber) / Number(secondNumber);
+      resultValueWindow.innerText = result;
+      resultOperatorWindow.classList.add("window__result-operator_visible");
     }
   }
-  resultOperatorWindow.classList.add("window__result-operator_visible");
-  resultValueWindow.innerText = result;
 });
