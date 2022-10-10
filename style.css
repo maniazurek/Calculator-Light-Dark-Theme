@@ -150,6 +150,15 @@ main.darktheme .window__result-value {
     color: #fff;
 }
 
+.window__history {
+    height: 50px;
+    overflow: scroll;
+}
+
+.hidden-screen {
+    display: none;
+}
+
 .controls__calculator {
     margin: 0 auto;
     display: grid;

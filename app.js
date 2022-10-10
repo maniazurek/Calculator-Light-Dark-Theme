@@ -13,6 +13,9 @@ const checkbox = document.getElementById("checkbox");
 // Containers
 
 const body = document.querySelector("body");
+
+const calculationsWindow = document.querySelector(".windows__calculator");
+
 const firstNumberWindow = document.querySelector(
   ".window__calculation-firstNumber"
 );
@@ -24,6 +27,8 @@ const calculationActionWindow = document.querySelector(
 );
 const resultOperatorWindow = document.querySelector(".window__result-operator");
 const resultValueWindow = document.querySelector(".window__result-value");
+
+const historyWindow = document.querySelector(".window__history");
 
 // Global variables
 
@@ -111,6 +116,7 @@ resetButton.addEventListener("click", function () {
   resultValueWindow.innerText = "";
 
   resultOperatorWindow.classList.remove("window__result-operator_visible");
+  
 });
 
 removeButton.addEventListener("click", function () {
@@ -148,4 +154,33 @@ resultButton.addEventListener("click", function () {
       resultOperatorWindow.classList.add("window__result-operator_visible");
     }
   }
+});
+
+let history = [];
+
+resultButton.addEventListener("click", function (event) {
+  let historyOperation = {
+    firstNumberHistory: firstNumber,
+    actionHistory: action,
+    secondNumberHistory: secondNumber,
+    resultHistory: result,
+  };
+  history.push(historyOperation);
+  console.log(history);
+
+
+  historyWindow.innerHTML = "";
+  history.forEach(function (singleElement) {
+    historyWindow.innerHTML += `<div>
+    <span>${singleElement.firstNumberHistory}</span>
+    <span>${singleElement.actionHistory}</span>
+    <span>${singleElement.secondNumberHistory}</span>
+    <span>${"= " + singleElement.resultHistory}</span>
+    </div>`;
+  });
+});
+
+historyButton.addEventListener("click", function(event) {
+  historyWindow.classList.toggle("hidden-screen");
+  calculationsWindow.classList.toggle("hidden-screen");
 });

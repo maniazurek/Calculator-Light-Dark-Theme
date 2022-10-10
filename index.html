@@ -1,61 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
     <title>Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <main class="calculator">
-        <div class="theme">
-        <input class="checkbox" type="checkbox" id="checkbox">
+      <div class="theme">
+        <input class="checkbox" type="checkbox" id="checkbox" />
         <label for="checkbox" class="label">
-            <i class="dark"></i>
-            <i class="light"></i>
-            <div class="ball"></div>
+          <i class="dark"></i>
+          <i class="light"></i>
+          <div class="ball"></div>
         </label>
-    </div>
-        <section class="windows__calculator">
-            <div class="window__calculation">
-                <span class="window__calculation-firstNumber"></span>
-                <span class="window__calculation-action"></span>
-                <span class="window__calculation-secondNumber"></span>
-            </div>
-            <div class="window__result">
-                <span class="window__result-operator">=</span>
-                <span class="window__result-value"></span>
-              </div>
-        </section>
-        
-        <section class="controls__calculator">
-            <button class="button controls__button-reset">Ac</button>
-            <button class="button controls__button-remove">⌫</button>
-            <button class="button controls__button-history">H</button>
-            <button class="button controls__button-action" data-action="/">/</button>
-            <button class="button controls__button-number" data-number="7">7</button>
-            <button class="button controls__button-number" data-number="8">8</button>
-            <button class="button controls__button-number" data-number="9">9</button>
-            <button class="button controls__button-action" data-action="*">*</button>
-            <button class="button controls__button-number" data-number="4">4</button>
-            <button class="button controls__button-number" data-number="5">5</button>
-            <button class="button controls__button-number" data-number="6">6</button>
-            <button class="button controls__button-action" data-action="-">-</button>
-            <button class="button controls__button-number" data-number="1">1</button>
-            <button class="button controls__button-number" data-number="2">2</button>
-            <button class="button controls__button-number" data-number="3">3</button>
-            <button class="button controls__button-action" data-action="+">+</button>
-            <button class="button controls__button-number controls__button-zero" data-number="0">0</button>
-            <button class="button controls__button-point" data-number=".">.</button>
-            <button class="button controls__button-result">=</button>
-        </section>
-        
+      </div>
+      <section class="windows__calculator">
+        <div class="window__calculation">
+          <span class="window__calculation-firstNumber"></span>
+          <span class="window__calculation-action"></span>
+          <span class="window__calculation-secondNumber"></span>
+        </div>
+        <div class="window__result">
+          <span class="window__result-operator">=</span>
+          <span class="window__result-value"></span>
+        </div>
+      </section>
+      <section class="window__history hidden-screen"></section>
 
+      <section class="controls__calculator">
+        <button class="button controls__button-reset">Ac</button>
+        <button class="button controls__button-remove">⌫</button>
+        <button class="button controls__button-history">H</button>
+        <button class="button controls__button-action" data-action="/">
+          /
+        </button>
+        <button class="button controls__button-number" data-number="7">
+          7
+        </button>
+        <button class="button controls__button-number" data-number="8">
+          8
+        </button>
+        <button class="button controls__button-number" data-number="9">
+          9
+        </button>
+        <button class="button controls__button-action" data-action="*">
+          *
+        </button>
+        <button class="button controls__button-number" data-number="4">
+          4
+        </button>
+        <button class="button controls__button-number" data-number="5">
+          5
+        </button>
+        <button class="button controls__button-number" data-number="6">
+          6
+        </button>
+        <button class="button controls__button-action" data-action="-">
+          -
+        </button>
+        <button class="button controls__button-number" data-number="1">
+          1
+        </button>
+        <button class="button controls__button-number" data-number="2">
+          2
+        </button>
+        <button class="button controls__button-number" data-number="3">
+          3
+        </button>
+        <button class="button controls__button-action" data-action="+">
+          +
+        </button>
+        <button
+          class="button controls__button-number controls__button-zero"
+          data-number="0">
+          0
+        </button>
+        <button class="button controls__button-point" data-number=".">.</button>
+        <button class="button controls__button-result">=</button>
+      </section>
     </main>
-</body>
-<script src="./app.js"></script>
+  </body>
+  <script src="./app.js"></script>
 </html>
