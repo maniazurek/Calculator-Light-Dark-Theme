@@ -151,8 +151,24 @@ main.darktheme .window__result-value {
 }
 
 .window__history {
-    height: 50px;
+    height: 140px;
     overflow: scroll;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #818181;
+    padding: 0 33px;
+}
+
+.window__result_history {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.action-history {
+    color: #109DFF;
 }
 
 .hidden-screen {

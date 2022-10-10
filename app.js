@@ -114,9 +114,10 @@ resetButton.addEventListener("click", function () {
   secondNumberWindow.innerText = "";
   calculationActionWindow.innerText = "";
   resultValueWindow.innerText = "";
+  historyWindow.innerHTML = "";
 
   resultOperatorWindow.classList.remove("window__result-operator_visible");
-  
+
 });
 
 removeButton.addEventListener("click", function () {
@@ -171,9 +172,9 @@ resultButton.addEventListener("click", function (event) {
 
   historyWindow.innerHTML = "";
   history.forEach(function (singleElement) {
-    historyWindow.innerHTML += `<div>
+    historyWindow.innerHTML += `<div class="window__result_history">
     <span>${singleElement.firstNumberHistory}</span>
-    <span>${singleElement.actionHistory}</span>
+    <span class="action-history">${singleElement.actionHistory}</span>
     <span>${singleElement.secondNumberHistory}</span>
     <span>${"= " + singleElement.resultHistory}</span>
     </div>`;
