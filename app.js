@@ -114,7 +114,6 @@ resetButton.addEventListener("click", function () {
   secondNumberWindow.innerText = "";
   calculationActionWindow.innerText = "";
   resultValueWindow.innerText = "";
-  historyWindow.innerHTML = "";
 
   resultOperatorWindow.classList.remove("window__result-operator_visible");
 
@@ -167,8 +166,6 @@ resultButton.addEventListener("click", function (event) {
     resultHistory: result,
   };
   history.push(historyOperation);
-  console.log(history);
-
 
   historyWindow.innerHTML = "";
   history.forEach(function (singleElement) {
@@ -184,4 +181,5 @@ resultButton.addEventListener("click", function (event) {
 historyButton.addEventListener("click", function(event) {
   historyWindow.classList.toggle("hidden-screen");
   calculationsWindow.classList.toggle("hidden-screen");
+  historyButton.classList.toggle("clicked");
 });

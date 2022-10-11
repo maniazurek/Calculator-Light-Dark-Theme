@@ -216,7 +216,14 @@ main.darktheme .window__result-value {
     line-height: 36px;
     color: #858585;
     background-color: #fff;
+}
+
+.notclicked {
     border: 1px solid #fff;
+}
+
+.clicked {
+    border: 3px solid #109DFF;
 }
 
 main.darktheme .controls__button-reset {
@@ -234,7 +241,14 @@ main.darktheme .controls__button-remove {
 main.darktheme .controls__button-history {
     background-color: #616161;
     color: #A5A5A5;
+}
+
+main.darktheme .notclicked {
     border-color: #616161;
+}
+
+main.darktheme .clicked {
+    border: 3px solid #109DFF;
 }
 
 .controls__button-action {
