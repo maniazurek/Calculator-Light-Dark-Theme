@@ -116,7 +116,6 @@ resetButton.addEventListener("click", function () {
   resultValueWindow.innerText = "";
 
   resultOperatorWindow.classList.remove("window__result-operator_visible");
-
 });
 
 removeButton.addEventListener("click", function () {
@@ -137,19 +136,19 @@ removeButton.addEventListener("click", function () {
 resultButton.addEventListener("click", function () {
   if (firstNumber && action && secondNumber) {
     if (action === "+") {
-      result = Number(firstNumber) + Number(secondNumber);
+      result = (Number(firstNumber) + Number(secondNumber)).toFixed(2);
       resultValueWindow.innerText = result;
       resultOperatorWindow.classList.add("window__result-operator_visible");
     } else if (action === "-") {
-      result = Number(firstNumber) - Number(secondNumber);
+      result = (Number(firstNumber) - Number(secondNumber)).toFixed(2);
       resultValueWindow.innerText = result;
       resultOperatorWindow.classList.add("window__result-operator_visible");
     } else if (action === "*") {
-      result = Number(firstNumber) * Number(secondNumber);
+      result = (Number(firstNumber) * Number(secondNumber)).toFixed(2);
       resultValueWindow.innerText = result;
       resultOperatorWindow.classList.add("window__result-operator_visible");
     } else if (action === "/") {
-      result = Number(firstNumber) / Number(secondNumber);
+      result = (Number(firstNumber) / Number(secondNumber)).toFixed(2);
       resultValueWindow.innerText = result;
       resultOperatorWindow.classList.add("window__result-operator_visible");
     }
@@ -178,7 +177,7 @@ resultButton.addEventListener("click", function (event) {
   });
 });
 
-historyButton.addEventListener("click", function(event) {
+historyButton.addEventListener("click", function (event) {
   historyWindow.classList.toggle("hidden-screen");
   calculationsWindow.classList.toggle("hidden-screen");
   historyButton.classList.toggle("clicked");
